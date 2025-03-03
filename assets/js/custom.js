@@ -186,3 +186,12 @@
 
 
 })(window.jQuery);
+
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.header-area');
+  if (window.scrollY > 50) { // Juster denne verdien etter behov
+    header.classList.add('shrink');
+  } else {
+    header.classList.remove('shrink');
+  }
+});
