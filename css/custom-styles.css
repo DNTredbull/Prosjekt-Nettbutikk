@@ -1,0 +1,183 @@
+img {
+    width: 200px;
+    /* Sett ønsket bredde */
+    height: auto;
+    /* Beholder bildeforholdet */
+} 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-lg-6 {
+    width: 48%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thumb img {
+    width: 100%;
+    height: auto;
+}
+
+.down-content {
+    text-align: center;
+}
+
+.item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .col-lg-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Enhanced Hover Effects */
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+/* Consistent Image Sizes */
+.thumb img {
+    width: 100%;
+    height: 200px;
+    /* Set a fixed height for consistency */
+    object-fit: cover;
+    /* Ensure the image covers the area */
+}
+
+/* Accessibility */
+.item:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 4px;
+}
+/* Add your custom CSS here */
+.elkjop-iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: none;
+    /* Fjern kantlinjen */
+    border-radius: 0;
+    /* Fjern avrundede hjørner */
+    height: auto;
+    /* Juster høyden etter behov */
+    width: 100%;
+    /* Juster bredden etter behov */
+    background-color: transparent;
+    /* Fjern bakgrunnsfargen */
+}
+
+.list-item img {
+    max-width: 150px;
+    /* Juster bredden etter behov */
+    height: auto;
+    margin-right: 20px;
+}
+
+.list-item h4 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.list-item p {
+    font-size: 14px;
+    color: #666;
+}
+.text-box {
+    flex: 1;
+    padding: 10px;
+    background-color: #f9f9f9;
+    /* Bakgrunnsfarge for tekstboksen */
+    border-radius: 5px;
+    /* Avrundede hjørner for tekstboksen */
+}
+
+.text-box h4 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.text-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
+    /* Juster marginen etter behov */
+}
+.col-lg-4:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #ffffff00;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-item h4 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.grid-item p {
+    font-size: 14px;
+    color: #666;
+}

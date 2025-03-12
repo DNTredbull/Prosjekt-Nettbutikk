@@ -18,32 +18,64 @@
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
     <link rel="stylesheet" href="custum-style.css">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Din egen Owl Carousel CSS -->
+    <link rel="stylesheet" href="path/to/your/owl-carousel.css">
     <style>
- .container {
-      display: flex;
-      flex-wrap: wrap;
+    .custom-scroll {
+        max-height: 200px; /* Adjust the height as needed */
+        overflow-y: auto;
     }
-    .item {
-      flex: 1 1 200px; /* Juster bredden etter behov */
+    @media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff; /* Endre bakgrunnsfarge etter behov */
     }
-    @media (max-width: 768px) {
-      .header {
-        flex-direction: column;
-      }
-      .nav {
-        display: none; /* Skjul navigasjonsmenyen på små skjermer */
-      }
-    }
-    h1 {
-      font-size: 5vw;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+}
     </style>
 
 </head>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Initialiser Owl Carousel -->
+<script>
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
 
 <body>
     <!-- ***** Preloader Start ***** -->
@@ -56,136 +88,146 @@
     </div>
     <!-- ***** Preloader End ***** -->
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/butikkoversikt_logo.png" alt="Butikkoversikt.no">
-                        </a>
-                        <!-- ***** Logo End ***** -->
-<!-- ***** Menu Start ***** -->
-<ul class="nav">
-    <li class="scroll-to-section"><a href="index.html" class="active">Hjem</a></li>
-    <li class="submenu">
-        <a href="javascript:;">kategorier</a>
-        <ul>
-            <li><a href="barn-og-baby.html" onclick="loadContent('barn-og-baby.html')">Baby og Barn</a></li>
-            <li><a href="bil-mc-og-båt.html" onclick="loadContent('bil-mc-og-båt.html')">Bil, MC og Båt</a></li>
-            <li><a href="data-og-elektronikk.html" onclick="loadContent('data-og-elektronikk.html')">Data og
-                    Elektronikk</a></li>
-            <li><a href="dyrebutikker.html" onclick="loadContent('dyrebutikker.html')">Dyrebutikker</a></li>
-            <li><a href="foto-og-video.html" onclick="loadContent('foto-og-video.html')">Foto og Video</a></li>
-            <li><a href="helse-og-velvære.html" onclick="loadContent('helse-og-velvære.html')">Helse og Velvære</a></li>
-            <li><a href="hobby-og-moro.html" onclick="loadContent('hobby-og-moro.html')">Hobby og Moro</a></li>
-            <li><a href="hus-og-hjem.html" onclick="loadContent('hus-og-hjem.html')">Hus og hjem</a></li>
-            <li><a href="klær-og-mote.html" onclick="loadContent('klær-og-mote.html')">Klær og Mote</a></li>
-            <li><a href="lekebutikker.html" onclick="loadContent('lekebutikker.html')">Lekebutikker</a></li>
-            <li><a href="mat-og-drikke.html" onclick="loadContent('mat-og-drikke.html')">Mat og Drikke</a></li>
-            <li><a href="reise-og-ferie.html" onclick="loadContent('reise-og-ferie.html')">Reise og Ferie</a></li>
-            <li><a href="sport-og-trening.html" onclick="loadContent('sport-og-trening.html')">Sport og Trening</a></li>
-            <li><a href="syn-linser-og-briller.html" onclick="loadContent('syn-linser-og-briller.html')">Syn, Linser &
-                    Briller</a></li>
-            <li><a href="tjenester.html" onclick="loadContent('tjenester.html')">Tjenester</a></li>
-            <li><a href="utenlandske-sender-til-norge.html"
-                    onclick="loadContent('utenlandske-sender-til-norge.html')">Utenlandske (sender til Norge)</a></li>
-            <li><a href="varehus.html" onclick="loadContent('varehus.html')">Varehus</a></li>
-            <li><a href="voksen.html" onclick="loadContent('voksen.html')">Voksen (18+)</a></li>
-        </ul>
-    </li>
-    <li class="submenu">
-        <a href="javascript:;">Topp 25 Nettbutikker</a>
-        <ul>
-            <li><a href="https://www.elkjop.no">Elkjøp</a></li>
-            <li><a href="https://www.komplett.no">Komplett</a></li>
-            <li><a href="https://www.oda.com">Oda</a></li>
-            <li><a href="https://www.apple.com/no">Apple</a></li>
-            <li><a href="https://www.zalando.no">Zalando</a></li>
-            <li><a href="https://www.finn.no">Finn</a></li>
-            <li><a href="https://www.amazon.com">Amazon</a></li>
-            <li><a href="https://www.ebay.com">eBay</a></li>
-            <li><a href="https://www.blivakker.no">Blivakker</a></li>
-            <li><a href="https://www.fjellsport.no">Fjellsport</a></li>
-            <li><a href="https://www.jollyroom.no">Jollyroom</a></li>
-            <li><a href="https://www.getinspired.no">Get Inspired</a></li>
-            <li><a href="https://www.ellos.no">Ellos</a></li>
-            <li><a href="https://www.lyko.com">Lyko</a></li>
-            <li><a href="https://www.farmasiet.no">Farmasiet</a></li>
-            <li><a href="https://www.proshop.no">Proshop</a></li>
-            <li><a href="https://www.bikeshop.no">Bikeshop</a></li>
-            <li><a href="https://www.adlibris.com">Adlibris</a></li>
-            <li><a href="https://www.milrab.no">Milrab</a></li>
-            <li><a href="https://www.blush.no">Blush</a></li>
-            <li><a href="https://www.nordicnest.no">Nordic Nest</a></li>
-            <li><a href="https://www.fotoknudsen.no">FotoKnudsen</a></li>
-            <li><a href="https://www.garnius.no">Garnius</a></li>
-            <li><a href="https://www.bokklubben.no">Bokklubben</a></li>
-            <li><a href="https://www.multicom.no">Multicom</a></li>
-        </ul>
-    </li>
-    <li class="scroll-to-section">
-        <ul>
-            <li class="submenu">
-                <a href="javascript:;">Film</a>
-                <ul>
-                    <li><a href="https://www.nrk.no/anmeldelser/nrk-anmelder-film-og-serier-1.15822234">filmpolitiet</a></li>
-                    <li><a href="https://www.reddit.com/r/movies">Reddit Movies</a></li>
-                    <li><a href="https://www.imdb.com/boards/">IMDb Boards</a></li>
-                    <li><a href="https://www.avforums.com/categories/movies-tv-shows-blu-ray-music.516/">AVForums Movies & TV Shows</a></li>
-                </ul>
-            </li>
-        </ul>
-            <li class="submenu">
-                <a href="javascript:;">Spill</a>
-                <ul>
-                    <li><a href="https://www.gamer.no/">Gamer</a></li>
-                    <li><a href="https://www.gamereactor.no/">Gamereactor</a></li>
-                    <li><a href="https://www.reddit.com/r/gaming">Reddit Gaming</a></li>
-                    <li><a href="https://www.neogaf.com">NeoGAF</a></li>
-                    <li><a href="https://www.resetera.com">ResetEra</a></li>
-                    <li><a href="https://www.gamespot.com/forums/">GameSpot Forums</a></li>
-                    <li><a href="https://www.ign.com/boards/">IGN Boards</a></li>
-                </ul>
-            </li>        
-    </li>
-</ul>
-    <a class='menu-trigger'>
-        <span>Menu</span>
-    </a>
-<!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="navbar-brand logo">
+                        <img src="assets/images/butikkoversikt_logo.png" alt="Butikkoversikt.no">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Trigger Start ***** -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- ***** Menu Trigger End ***** -->
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Hjem</a>
+                            </li>                            
+                                <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownKategorier" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Kategorier
+                                </a>
+                                <div class="dropdown-menu custom-scroll" aria-labelledby="navbarDropdownKategorier">
+                                    <a class="dropdown-item" href="barn-og-baby.html">Baby og Barn</a>
+                                    <a class="dropdown-item" href="bil-mc-og-båt.html">Bil, MC og Båt</a>
+                                    <a class="dropdown-item" href="data-og-elektronikk.html">Data og Elektronikk</a>
+                                    <a class="dropdown-item" href="dyrebutikker.html">Dyrebutikker</a>
+                                    <a class="dropdown-item" href="foto-og-video.html">Foto og Video</a>
+                                    <a class="dropdown-item" href="helse-og-velvære.html">Helse og Velvære</a>
+                                    <a class="dropdown-item" href="hobby-og-moro.html">Hobby og Moro</a>
+                                    <a class="dropdown-item" href="hus-og-hjem.html">Hus og hjem</a>
+                                    <a class="dropdown-item" href="klær-og-mote.html">Klær og Mote</a>
+                                    <a class="dropdown-item" href="lekebutikker.html">Lekebutikker</a>
+                                    <a class="dropdown-item" href="mat-og-drikke.html">Mat og Drikke</a>
+                                    <a class="dropdown-item" href="reise-og-ferie.html">Reise og Ferie</a>
+                                    <a class="dropdown-item" href="sport-og-trening.html">Sport og Trening</a>
+                                    <a class="dropdown-item" href="syn-linser-og-briller.html">Syn, Linser & Briller</a>
+                                    <a class="dropdown-item" href="tjenester.html">Tjenester</a>
+                                    <a class="dropdown-item" href="utenlandske-sender-til-norge.html">Utenlandske
+                                        (sender til Norge)</a>
+                                    <a class="dropdown-item" href="varehus.html">Varehus</a>
+                                    <a class="dropdown-item" href="voksen.html">Voksen (18+)</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTop25" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Topp 25 Nettbutikker
+                                </a>
+                                <div class="dropdown-menu custom-scroll" aria-labelledby="navbarDropdownTop25">
+                                    <a class="dropdown-item" href="https://www.elkjop.no">Elkjøp</a>
+                                    <a class="dropdown-item" href="https://www.komplett.no">Komplett</a>
+                                    <a class="dropdown-item" href="https://www.oda.com">Oda</a>
+                                    <a class="dropdown-item" href="https://www.apple.com/no">Apple</a>
+                                    <a class="dropdown-item" href="https://www.zalando.no">Zalando</a>
+                                    <a class="dropdown-item" href="https://www.finn.no">Finn</a>
+                                    <a class="dropdown-item" href="https://www.amazon.com">Amazon</a>
+                                    <a class="dropdown-item" href="https://www.ebay.com">eBay</a>
+                                    <a class="dropdown-item" href="https://www.blivakker.no">Blivakker</a>
+                                    <a class="dropdown-item" href="https://www.fjellsport.no">Fjellsport</a>
+                                    <a class="dropdown-item" href="https://www.jollyroom.no">Jollyroom</a>
+                                    <a class="dropdown-item" href="https://www.getinspired.no">Get Inspired</a>
+                                    <a class="dropdown-item" href="https://www.ellos.no">Ellos</a>
+                                    <a class="dropdown-item" href="https://www.lyko.com">Lyko</a>
+                                    <a class="dropdown-item" href="https://www.farmasiet.no">Farmasiet</a>
+                                    <a class="dropdown-item" href="https://www.proshop.no">Proshop</a>
+                                    <a class="dropdown-item" href="https://www.bikeshop.no">Bikeshop</a>
+                                    <a class="dropdown-item" href="https://www.adlibris.com">Adlibris</a>
+                                    <a class="dropdown-item" href="https://www.milrab.no">Milrab</a>
+                                    <a class="dropdown-item" href="https://www.blush.no">Blush</a>
+                                    <a class="dropdown-item" href="https://www.nordicnest.no">Nordic Nest</a>
+                                    <a class="dropdown-item" href="https://www.fotoknudsen.no">FotoKnudsen</a>
+                                    <a class="dropdown-item" href="https://www.garnius.no">Garnius</a>
+                                    <a class="dropdown-item" href="https://www.bokklubben.no">Bokklubben</a>
+                                    <a class="dropdown-item" href="https://www.multicom.no">Multicom</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFilm" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Film
+                                </a>
+                                <div class="dropdown-menu custom-scroll" aria-labelledby="navbarDropdownFilm">
+                                    <a class="dropdown-item"
+                                        href="https://www.nrk.no/anmeldelser/nrk-anmelder-film-og-serier-1.15822234">filmpolitiet</a>
+                                    <a class="dropdown-item" href="https://www.reddit.com/r/movies">Reddit Movies</a>
+                                    <a class="dropdown-item" href="https://www.imdb.com/boards/">IMDb Boards</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.avforums.com/categories/movies-tv-shows-blu-ray-music.516/">AVForums
+                                        Movies & TV Shows</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSpill" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Spill
+                                </a>
+                                <div class="dropdown-menu custom-scroll" aria-labelledby="navbarDropdownSpill">
+                                    <a class="dropdown-item" href="https://www.gamer.no">Gamer</a>
+                                    <a class="dropdown-item" href="https://www.gamereactor.no">Gamereactor</a>
+                                    <a class="dropdown-item" href="https://www.reddit.com/r/gaming">Reddit Gaming</a>
+                                    <a class="dropdown-item" href="https://www.neogaf.com">NeoGAF</a>
+                                    <a class="dropdown-item" href="https://www.resetera.com">ResetEra</a>
+                                    <a class="dropdown-item" href="https://www.gamespot.com/forums/">GameSpot Forums</a>
+                                    <a class="dropdown-item" href="https://www.ign.com/boards/">IGN Boards</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
         </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-12">
                     <div class="left-content">
                         <div class="thumb">
                             <div class="inner-content">
-                                <h4>Våren kommer</h4>
-                                <span>Se vårstilene her</span>
-                                <a href="https://www.kids-world.com/no-no/">
-                                    <img src="assets/images/barn-og-baby/kids-world-1200x630-2.jpg"
-                                        alt="Ukens Tilbud Elkjøp">
+                                <a href="index.html" class="logo">
+                                    <img src="assets/images/butikkoversikt_logo.png" alt="Butikkoversikt.no">
                                 </a>
+                                <h4>Det vil komme mange flere butikker og andre nyttige sider du kan besøke fremover</h4>
+                                <span>Men ta en titt på det som allerede er her</span>
                             </div>
-                            <a href="https://www.kids-world.com/no-no/">
-                                <img src="assets/images/barn-og-baby/Kids.jpg" alt="Ukens Tilbud Elkjøp">
-                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-12">
                     <div class="right-content">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
@@ -195,8 +237,7 @@
                                         <div class="hover-content">
                                             <div class="inner">
                                                 <h4>Data og Elektronikk</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
-                                                </p>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                                 <div class="main-border-button">
                                                     <a href="data-og-elektronikk.html">Discover More</a>
                                                 </div>
@@ -206,7 +247,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
@@ -216,8 +257,7 @@
                                         <div class="hover-content">
                                             <div class="inner">
                                                 <h4>Klær og Mote</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
-                                                </p>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                                 <div class="main-border-button">
                                                     <a href="klær-og-mote.html">Discover More</a>
                                                 </div>
@@ -227,7 +267,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
@@ -237,34 +277,34 @@
                                         <div class="hover-content">
                                             <div class="inner">
                                                 <h4>Barn</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
-                                                </p>
-                                            <div class="main-border-button">
-                                                <a href="barn-og-baby.html">Discover More</a>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="barn-og-baby.html">Discover More</a>
+                                                </div>
                                             </div>
                                         </div>
+                                        <img src="assets/images/baner-right-image-03.jpg">
                                     </div>
-                                    <img src="assets/images/baner-right-image-03.jpg">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="right-first-image">
-                                <div class="thumb">
-                                    <div class="inner-content">
-                                        <h4>Hus og Hjem</h4>
-                                        <span>Best Trend Accessories</span>
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="inner">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
                                             <h4>Hus og Hjem</h4>
-                                            <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
-                                            <div class="main-border-button">
-                                                <a href="hus-og-hjem.html">Discover More</a>
+                                            <span>Best Trend Accessories</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Hus og Hjem</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="hus-og-hjem.html">Discover More</a>
+                                                </div>
                                             </div>
                                         </div>
+                                        <img src="assets/images/baner-right-image-04.jpg">
                                     </div>
-                                    <img src="assets/images/baner-right-image-04.jpg">
                                 </div>
                             </div>
                         </div>
@@ -273,8 +313,7 @@
             </div>
         </div>
     </div>
-</div>
-<!-- ***** Main Banner Area End ***** -->
+    <!-- ***** Main Banner Area End ***** -->
 
 <!-- ***** Kids Area Starts ***** -->
 <section class="section" id="kids">
@@ -298,7 +337,7 @@
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.babyshop.no">
-                                    <img src="assets/images/barn-og-baby/babyshop_logo_200.jpg" alt="Babyshop">
+                                    <img src="assets/images/barn-og-baby/babyshop_logo_200.jpg" alt="Babyshop" class="img-fluid">
                                     <p>Vårt produktsortiment består av baby- og barneklær, sko, leker, barnevogner, bilseter, mammaklær, tilbehør og mye mer
                                     for alderen 0-10 år.</p>
                                 </a>
@@ -307,105 +346,105 @@
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.bonprix.no">
-                                    <img src="assets/images/barn-og-baby/bonprix_logo_200-1.jpg" alt="Bonprix">
+                                    <img src="assets/images/barn-og-baby/bonprix_logo_200-1.jpg" alt="Bonprix" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.boozt.com">
-                                    <img src="assets/images/barn-og-baby/boozt_logo_200.jpg" alt="Boozt">
+                                    <img src="assets/images/barn-og-baby/boozt_logo_200.jpg" alt="Boozt" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.booztlet.com">
-                                    <img src="assets/images/barn-og-baby/booztlet-logo-200x200.jpg" alt="Booztlet">
+                                    <img src="assets/images/barn-og-baby/booztlet-logo-200x200.jpg" alt="Booztlet" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.cubus.com">
-                                    <img src="assets/images/barn-og-baby/cubus_logo_200.jpg" alt="Cubus">
+                                    <img src="assets/images/barn-og-baby/cubus_logo_200.jpg" alt="Cubus" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.ellos.no">
-                                    <img src="assets/images/barn-og-baby/" alt="Ellos">
+                                    <img src="assets/images/barn-og-baby/" alt="Ellos" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.guttelus.no">
-                                    <img src="assets/images/barn-og-baby/guttelus-logo--200x201.jpg" alt="Guttelus">
+                                    <img src="assets/images/barn-og-baby/guttelus-logo--200x201.jpg" alt="Guttelus" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.hm.com">
-                                    <img src="assets/images/barn-og-baby/hm_logo_200.jpg" alt="H&M">
+                                    <img src="assets/images/barn-og-baby/hm_logo_200.jpg" alt="H&M" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.lilleba.no">
-                                    <img src="assets/images/barn-og-baby/lilleba-logo-nettbutikk-200x200.jpg" alt="Lilleba">
+                                    <img src="assets/images/barn-og-baby/lilleba-logo-nettbutikk-200x200.jpg" alt="Lilleba" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.lindex.com">
-                                    <img src="assets/images/barn-og-baby/lindex-logo-200.jpg" alt="Lindex">
+                                    <img src="assets/images/barn-og-baby/lindex-logo-200.jpg" alt="Lindex" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.miinto.no">
-                                    <img src="assets/images/barn-og-baby/miinto_logo_300-200x200.jpg" alt="Miinto">
+                                    <img src="assets/images/barn-og-baby/miinto_logo_300-200x200.jpg" alt="Miinto" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.nameit.com">
-                                    <img src="assets/images/barn-og-baby/nameit_logo_200.jpg" alt="Name it">
+                                    <img src="assets/images/barn-og-baby/nameit_logo_200.jpg" alt="Name it" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.petterpia.no">
-                                    <img src="assets/images/barn-og-baby/petter_og_pia_logo300-200x200.jpg" alt="Petter & Pia">
+                                    <img src="assets/images/barn-og-baby/petter_og_pia_logo300-200x200.jpg" alt="Petter & Pia" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.polarnopyret.no">
-                                    <img src="assets/images/barn-og-baby/polarn-o-pyret-logo_200.jpg" alt="Polarn O. Pyret">
+                                    <img src="assets/images/barn-og-baby/polarn-o-pyret-logo_200.jpg" alt="Polarn O. Pyret" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.reima.com">
-                                    <img src="assets/images/barn-og-baby/reima_logo_200.jpg" alt="Reima">
+                                    <img src="assets/images/barn-og-baby/reima_logo_200.jpg" alt="Reima" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="thumb">
                                 <a href="https://www.zalando.no">
-                                    <img src="assets/images/barn-og-baby/zalando_logo_200.jpg" alt="Zalando">
+                                    <img src="assets/images/barn-og-baby/zalando_logo_200.jpg" alt="Zalando" class="img-fluid">
                                 </a>
                             </div>
                         </div>
@@ -439,7 +478,7 @@
                     <div class="item">
                         <div class="thumb">
                             <a href="https://www.12bildeler.no">
-                                <img src="assets/images/Bil, MC og Båt/12bildeler_logo_200.jpg" alt="12 Bildeler">
+                                <img src="assets/images/Bil, MC og Båt/12bildeler_logo_200.jpg" alt="12 Bildeler" >
                                 <p>Tilbyr et stort utvalg av bildeler.</p>
                             </a>
                         </div>
