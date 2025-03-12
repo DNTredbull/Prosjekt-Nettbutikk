@@ -922,6 +922,77 @@ banner
   display: block;
   margin-bottom: 30px;
 }
+/* Øk størrelsen på menyen for mobil */
+@media (max-width: 768px) {
+  .header-area .nav {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+  }
+
+  .header-area .nav li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .header-area .nav li a {
+    font-size: 18px;
+    /* Øk fontstørrelsen for bedre lesbarhet */
+    padding: 15px 0;
+  }
+
+  .menu-trigger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    /* Øk størrelsen på menyknappen */
+  }
+}
+/* Juster layouten for mobilvisning */
+@media (max-width: 768px) {
+  .main-banner .row {
+    display: flex;
+    flex-direction: column;
+    /* Endre retningen til kolonne for mobilvisning */
+  }
+
+  .main-banner .left-content,
+  .main-banner .right-content {
+    width: 100%;
+    /* Sørg for at innholdet tar opp hele bredden */
+    margin-bottom: 20px;
+    /* Legg til margin for å skille seksjonene */
+  }
+
+  .main-banner .right-content .right-first-image img {
+    width: 100%;
+    /* Sørg for at bildene skaleres riktig */
+  }
+}
+/* Juster logoen for mobilvisning */
+@media (max-width: 768px) {
+  .header-area .logo img {
+    max-width: 150px;
+    /* Juster bredden for mindre skjermer */
+    height: auto;
+  }
+}
+/* Legg til padding og margin for bedre brukeropplevelse */
+@media (max-width: 768px) {
+  .header-area .nav li a {
+    padding: 15px 0;
+    /* Øk padding for bedre klikkbarhet */
+  }
+
+  .main-banner .left-content .inner-content,
+  .main-banner .right-content .inner-content {
+    padding: 10px;
+    /* Legg til padding for bedre lesbarhet */
+  }
+}
+
 ---------------------------------------------
 Men
 ---------------------------------------------
