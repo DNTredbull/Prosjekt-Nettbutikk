@@ -835,32 +835,67 @@ banner
 /* Responsiv stil for mobil */
 @media (max-width: 768px) {
   .main-banner .left-content .inner-content {
-    left: 10px; /* Juster etter behov */
-    top: 10px; /* Juster etter behov */
+    left: 10px;
+    /* Juster etter behov */
+    top: 10px;
+    /* Juster etter behov */
   }
 
   .main-banner .left-content .inner-content h4 {
-    font-size: 32px; /* Mindre skriftstørrelse for mobil */
+    font-size: 32px;
+    /* Mindre skriftstørrelse for mobil */
     margin-bottom: 10px;
   }
 
   .main-banner .left-content .inner-content span {
-    font-size: 14px; /* Mindre skriftstørrelse for mobil */
+    font-size: 14px;
+    /* Mindre skriftstørrelse for mobil */
     margin-bottom: 20px;
   }
 
   .main-banner .right-content .right-first-image .thumb .inner-content h4 {
-    font-size: 24px; /* Mindre skriftstørrelse for mobil */
+    font-size: 24px;
+    /* Mindre skriftstørrelse for mobil */
   }
 
   .main-banner .right-content .right-first-image .thumb .inner-content span {
-    font-size: 12px; /* Mindre skriftstørrelse for mobil */
+    font-size: 12px;
+    /* Mindre skriftstørrelse for mobil */
   }
 
   .main-banner .right-content .right-first-image img {
-    width: 100%; /* Sørg for at bildene skaleres riktig */
+    width: 100%;
+    /* Sørg for at bildene skaleres riktig */
+  }
+
+  /* Nytt forslag for å forbedre layouten */
+  .main-banner .row {
+    display: flex;
+    flex-direction: column;
+    /* Endre retningen til kolonne for mobilvisning */
+  }
+
+  .main-banner .left-content,
+  .main-banner .right-content {
+    width: 100%;
+    /* Sørg for at innholdet tar opp hele bredden */
+    margin-bottom: 20px;
+    /* Legg til margin for å skille seksjonene */
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    /* Endre bakgrunnsfarge etter behov */
+    padding: 10px;
+    /* Legg til padding for å gjøre menyen større */
+    font-size: 18px;
+    /* Øk fontstørrelsen for bedre lesbarhet */
   }
 }
+
 .main-banner .right-content .right-first-image .thumb .hover-content {
   position: absolute;
   top: 0;
@@ -885,14 +920,15 @@ banner
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-
 }
+
 .inner-content h4 {
   color: #fff;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
 }
+
 .inner-content span {
   font-size: 14px;
   color: #fff;
@@ -901,10 +937,7 @@ banner
   display: block;
   margin-bottom: 30px;
 }
-
-
-/*
----------------------------------------------
+/* Responsiv stil for mobil */
 Men
 ---------------------------------------------
 */
