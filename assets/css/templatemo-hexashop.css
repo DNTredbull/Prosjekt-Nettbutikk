@@ -147,9 +147,8 @@ body {
   font-weight: 400;
   background-color: #dbd6d6;
   font-size: 16px;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -176,6 +175,29 @@ p {
   font-size: 14px;
   line-height: 25px;
   color: #fbfbf9;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .header-area {
+    height: 100px;
+    justify-content: space-between;
+  }
+
+  .header-area .logo img {
+    max-width: 150px;
+  }
+
+  .header-area .nav {
+    display: none;
+  }
+
+  .menu-trigger {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 /* 
@@ -462,7 +484,11 @@ header
   visibility: hidden;
   z-index: -1;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-}
+  max-height: 400px;
+  /* Sett en passende maks høyde */
+  overflow-y: auto;
+  /* Legg til rullefunksjon */
+  }
 
 .header-area .main-nav .nav li.submenu ul li {
   margin-left: 0px;
@@ -768,6 +794,41 @@ header
     display: flex !important;
   }
 }
+ .header-area .container .row .col-12 .navbar .header-content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-area .container .row .col-12 .navbar .header-content p.custom-p {
+        margin-right: auto;
+        font-size: 14px;
+        line-height: 25px;
+        color: #fbfbf9;
+        text-align: left; /* Ensure text alignment is left */
+    }
+
+    .header-area .container .row .col-12 .navbar .header-content .navbar-brand.logo {
+        margin-left: auto; /* Ensure logo is pushed to the right */
+    }
+
+    .header-area {
+        display: flex;
+        align-items: center;
+    }
+
+         .navbar-collapse {
+           display: flex;
+           flex-direction: column;
+         }
+    
+         .navbar-nav {
+           width: 100%;
+         }
+    
+         .nav-item {
+           width: 100%;
+         }
 
 
 /* 
@@ -775,31 +836,37 @@ header
 banner
 --------------------------------------------- 
 */
+.main-banner .inner-content {
+  display: flex;
+  align-items: center;
+}
 
+.main-banner .inner-content h4,
+.main-banner .inner-content span {
+  margin: 0 10px;
+  /* Juster marginene etter behov */
+}
 .main-banner {
   border-bottom: #eee;
   padding-top: 160px;
   padding-bottom: 30px;
 }
 
-.main-banner .left-content .thumb img {
-  width: 50%;
-  overflow: hidden;
-}
-
 .main-banner .left-content .inner-content {
   position: absolute;
-  left: 100px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 20px; /* Juster denne verdien etter behov */
+  top: 20px; /* Juster denne verdien etter behov */
+  transform: none; /* Fjern vertikal sentrering */
 }
 
 .main-banner .left-content .inner-content h4 {
   color: #fff;
-  margin-top: -10px;
-  font-size: 52px;
+  margin-top: 0; /* Juster margin etter behov */
+  font-size: 12px;
   font-weight: 700;
   margin-bottom: 20px;
+  margin-left: 50px;  /* Juster denne verdien etter behov */
+  margin-right: 50px; /* Juster denne verdien etter behov */
 }
 
 .main-banner .left-content .inner-content span {
@@ -811,47 +878,88 @@ banner
   margin-bottom: 30px;
 }
 
-.main-banner .right-content .right-first-image {
-  margin-bottom: 28.5px;
+/* Responsiv stil for mobil */
+@media (max-width: 768px) {
+  .main-banner .inner-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-banner .inner-content h4,
+  .main-banner .inner-content span {
+    margin: 10px 0;
+    /* Juster marginene etter behov */
+  }
+
+  .main-banner .left-content .inner-content {
+    left: 10px;
+    /* Juster etter behov */
+    top: 10px;
+    /* Juster etter behov */
+  }
+
+  .main-banner .left-content .inner-content h4 {
+    font-size: 32px;
+    /* Mindre skriftstørrelse for mobil */
+    margin-bottom: 10px;
+  }
+
+  .main-banner .left-content .inner-content span {
+    font-size: 14px;
+    /* Mindre skriftstørrelse for mobil */
+    margin-bottom: 20px;
+  }
+
+  .main-banner .right-content .right-first-image .thumb .inner-content h4 {
+    font-size: 24px;
+    /* Mindre skriftstørrelse for mobil */
+  }
+
+  .main-banner .right-content .right-first-image .thumb .inner-content span {
+    font-size: 12px;
+    /* Mindre skriftstørrelse for mobil */
+  }
+
+  .main-banner .right-content .right-first-image img {
+    width: 100%;
+    /* Sørg for at bildene skaleres riktig */
+  }
+
+  /* Nytt forslag for å forbedre layouten */
+  .main-banner .row {
+    display: flex;
+    flex-direction: column;
+    /* Endre retningen til kolonne for mobilvisning */
+  }
+
+  .main-banner .left-content,
+  .main-banner .right-content {
+    width: 100%;
+    /* Sørg for at innholdet tar opp hele bredden */
+    margin-bottom: 20px;
+    /* Legg til margin for å skille seksjonene */
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    /* Endre bakgrunnsfarge etter behov */
+    padding: 10px;
+    /* Legg til padding for å gjøre menyen større */
+    font-size: 18px;
+    /* Øk fontstørrelsen for bedre lesbarhet */
+  }
 }
 
-.main-banner .right-content .right-first-image .thumb {
-  position: relative;
-  text-align: center;
-}
-
-.main-banner .right-content .right-first-image .thumb img {
-  width: 100%;
-  overflow: hidden;
-}
-
-.main-banner .right-content .right-first-image .thumb .inner-content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: center;
-}
-
-.main-banner .right-content .right-first-image .thumb .inner-content h4 {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.main-banner .right-content .right-first-image .thumb .inner-content span {
-  font-size: 16px;
-  color: #fff;
-  font-style: italic;
-}
 
 .main-banner .right-content .right-first-image .thumb .hover-content {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  left: 15px;
-  bottom: 15px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   text-align: center;
   background-color: rgba(42, 42, 42, .97);
   opacity: 0;
@@ -872,22 +980,96 @@ banner
   width: 100%;
 }
 
-.main-banner .right-content .right-first-image .thumb .hover-content h4 {
+.inner-content h4 {
   color: #fff;
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.main-banner .right-content .right-first-image .thumb .hover-content p {
+.inner-content span {
+  font-size: 14px;
   color: #fff;
-  padding: 0px 20px;
-  margin-bottom: 20px;
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+  margin-bottom: 30px;
 }
 
+/* Øk størrelsen på menyen for mobil */
+@media (max-width: 768px) {
+  .header-area .nav {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+  }
 
+  .header-area .nav li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
 
-/*
+  .header-area .nav li a {
+    font-size: 18px;
+    /* Øk fontstørrelsen for bedre lesbarhet */
+    padding: 15px 0;
+  }
+
+  .menu-trigger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    /* Øk størrelsen på menyknappen */
+  }
+}
+
+/* Juster layouten for mobilvisning */
+@media (max-width: 768px) {
+  .main-banner .row {
+    display: flex;
+    flex-direction: column;
+    /* Endre retningen til kolonne for mobilvisning */
+  }
+
+  .main-banner .left-content,
+  .main-banner .right-content {
+    width: 100%;
+    /* Sørg for at innholdet tar opp hele bredden */
+    margin-bottom: 20px;
+    /* Legg til margin for å skille seksjonene */
+  }
+
+  .main-banner .right-content .right-first-image img {
+    width: 100%;
+    /* Sørg for at bildene skaleres riktig */
+  }
+}
+
+/* Juster logoen for mobilvisning */
+@media (max-width: 768px) {
+  .header-area .logo img {
+    max-width: 150px;
+    /* Juster bredden for mindre skjermer */
+    height: auto;
+  }
+}
+
+/* Legg til padding og margin for bedre brukeropplevelse */
+@media (max-width: 768px) {
+  .header-area .nav li a {
+    padding: 15px 0;
+    /* Øk padding for bedre klikkbarhet */
+  }
+
+  .main-banner .left-content .inner-content,
+  .main-banner .right-content .inner-content {
+    padding: 10px;
+    /* Legg til padding for bedre lesbarhet */
+  }
+}
+
 ---------------------------------------------
 Men
 ---------------------------------------------
@@ -1373,6 +1555,26 @@ Kids
   background-color: transparent;
   line-height: 48px;
   border: 1px solid #f5f2f2;
+}
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.owl-nav button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .owl-nav button {
+    font-size: 1.5rem;
+  }
 }
 
 
